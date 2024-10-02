@@ -67,7 +67,7 @@ nav ul {
 
 nav ul li {
     margin: 5px;              /* Add spacing around each list item */
-    flex: 1 1 150px;          /* Allow items to grow and shrink with a minimum width */
+    flex: 0 1 auto;          /* Allow items to grow and shrink with a minimum width */
 }
 
 nav ul li a {
