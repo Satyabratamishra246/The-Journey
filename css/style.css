@@ -58,15 +58,15 @@ nav .container {
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-direction: row; /* Default to horizontal layout for desktop */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 5px; /* Add spacing around each list item */
 }
 
 nav ul li a {
@@ -76,6 +76,8 @@ nav ul li a {
     border: 1px solid transparent; /* Initial border to create boxes */
     border-radius: 5px; /* Rounded corners for the boxes */
     transition: border-color 0.3s; /* Smooth transition for border color */
+    display: inline-block; /* Ensures the anchor tags are treated as block elements */
+    min-width: 100px; /* Set a minimum width to maintain uniformity */
 }
 
 nav ul li a:hover {
@@ -84,17 +86,14 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    nav .container {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start;
-    }
     nav ul {
-        flex-direction: column; /* Stack menu items vertically */
-        width: 100%;
+        flex-direction: column; /* Stack items vertically for mobile */
     }
+
     nav ul li {
-        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Make list items full width on mobile */
     }
+
     nav ul li a {
         border: 1px solid #ccc; /* Visible border on mobile devices */
         background-color: #f0f0f0; /* Background color for the boxes on mobile */
