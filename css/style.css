@@ -243,3 +243,289 @@ footer {
         width: 25px; /* Slightly smaller icons on mobile */
     }
 }
+
+#key-steps {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Helvetica Neue', sans-serif; /* Clean modern font */
+}
+
+#key-steps h2 {
+    color: #333333; /* Darker gray for headings */
+    margin-bottom: 15px;
+    font-size: 1.5em; /* Larger heading size */
+    text-align: left;
+}
+
+#key-steps ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#key-steps li {
+    margin-bottom: 10px;
+    line-height: 1.5; /* Standard line height */
+    color: #555555; /* Medium gray for text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #key-steps {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+
+    #key-steps h2 {
+        font-size: 1.5em; /* Slightly smaller heading on mobile */
+    }
+
+    #key-steps li {
+        font-size: 0.9em; /* Slightly smaller font for list items */
+        margin-bottom: 8px; /* Reduced margin for list items */
+    }
+}
+
+@media (max-width: 480px) {
+    #key-steps {
+        padding: 10px; /* Further reduced padding for very small screens */
+    }
+
+    #key-steps h2 {
+        font-size: 1.25em; /* Smaller heading size for small devices */
+    }
+
+    #key-steps li {
+        font-size: 0.85em; /* Further reduce font size */
+        line-height: 1.4; /* Slightly tighter line height */
+    }
+}
+
+#project-overview {
+    margin: 20px 0; /* Space around the section */
+    padding: 20px; /* Inner padding for the section */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Helvetica Neue', sans-serif; /* Clean modern font */
+}
+
+#project-overview h2 {
+    color: #333333; /* Darker gray for headings */
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 1.75em; /* Larger heading size */
+    text-align: left; /* Align heading to the left */
+}
+
+#project-overview p {
+    line-height: 1.6; /* Standard line height for better readability */
+    color: #555555; /* Medium gray for text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #project-overview {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+
+    #project-overview h2 {
+        font-size: 1.5em; /* Slightly smaller heading on mobile */
+    }
+
+    #project-overview p {
+        font-size: 0.9em; /* Slightly smaller font for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+    #project-overview {
+        padding: 10px; /* Further reduced padding for very small screens */
+    }
+
+    #project-overview h2 {
+        font-size: 1.25em; /* Smaller heading size for small devices */
+    }
+
+    #project-overview p {
+        font-size: 0.85em; /* Further reduce font size for paragraph */
+        line-height: 1.4; /* Slightly tighter line height */
+    }
+}
+
+.project-logo {
+    display: block; /* Makes the image a block element */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+    margin: 20px 0; /* Space around the image */
+}
+
+.subsection {
+    margin-top: 20px; /* Space before the subsection */
+    padding: 15px; /* Inner padding for subsection */
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #e0e0e0; /* Border around the subsection */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.subsection h3 {
+    color: #333333; /* Dark gray for subsection headings */
+    margin-bottom: 10px; /* Space below subsection headings */
+}
+
+.subsection ul {
+    padding-left: 20px; /* Indentation for list items */
+}
+
+.download-link {
+    color: #007BFF; /* Blue color for download link */
+    text-decoration: none; /* No underline */
+}
+
+.download-link:hover {
+    text-decoration: underline; /* Underline on hover for visibility */
+}
+
+.tech-icons {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-wrap: wrap; /* Allow wrapping to next line on smaller screens */
+}
+
+.tech-icons li {
+    display: flex; /* Align icon and text in a row */
+    align-items: center; /* Center vertically */
+    margin: 10px 15px; /* Space between icons */
+}
+
+.tech-icon {
+    width: 40px; /* Fixed width for icons */
+    height: 40px; /* Fixed height for icons */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+#descriptive-insights {
+    margin: 2rem 0; /* Space around the section */
+    padding: 1rem; /* Padding inside the section */
+    border: 1px solid #ddd; /* Light border around the section */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* Light background color */
+}
+
+#descriptive-insights h2 {
+    font-size: 1.5rem; /* Font size for the main heading */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+#descriptive-insights table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin-top: 1rem; /* Space above the table */
+    overflow-x: auto; /* Horizontal scroll for small screens */
+    display: block; /* Ensure block display for scroll */
+}
+
+#descriptive-insights th, #descriptive-insights td {
+    border: 1px solid #ddd; /* Light gray border for table cells */
+    padding: 12px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+    /*white-space: nowrap; /* Prevent text from wrapping */
+}
+
+#descriptive-insights th {
+    background-color: #f2f2f2; /* Light gray background for header */
+    color: #333; /* Darker text color for header */
+}
+
+#descriptive-insights tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors for readability */
+}
+
+#descriptive-insights tr:hover {
+    background-color: #eaeaea; /* Highlight row on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #descriptive-insights {
+        padding: 0.75rem; /* Reduced padding on smaller screens */
+    }
+
+    #descriptive-insights h2 {
+        font-size: 1.25rem; /* Slightly smaller heading on mobile */
+    }
+
+    #descriptive-insights th, #descriptive-insights td {
+        padding: 10px; /* Reduced padding for table cells */
+        font-size: 0.875rem; /* Smaller font size for table cells */
+    }
+}
+
+@media (max-width: 480px) {
+    #descriptive-insights {
+        padding: 0.5rem; /* Further reduced padding for very small screens */
+    }
+
+    #descriptive-insights h2 {
+        font-size: 1rem; /* Smaller heading size for small devices */
+    }
+
+    #descriptive-insights th, #descriptive-insights td {
+        padding: 8px; /* Further reduced padding for table cells */
+        font-size: 0.75rem; /* Further reduced font size for table cells */
+    }
+}
+
+
+
+#outcomes {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Helvetica Neue', sans-serif; /* Clean modern font */
+}
+
+#outcomes h2 {
+    color: #333333; /* Darker gray for headings */
+    margin-bottom: 15px;
+    font-size: 1.5em; /* Larger heading size */
+    text-align: left;
+}
+
+#outcomes p {
+    line-height: 1.5; /* Standard line height */
+    color: #555555; /* Medium gray for text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #outcomes {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+
+    #outcomes h2 {
+        font-size: 1.5em; /* Slightly smaller heading on mobile */
+    }
+
+    #outcomes p {
+        font-size: 0.9em; /* Slightly smaller font for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+    #outcomes {
+        padding: 10px; /* Further reduced padding for very small screens */
+    }
+
+    #outcomes h2 {
+        font-size: 1.25em; /* Smaller heading size for small devices */
+    }
+
+    #outcomes p {
+        font-size: 0.85em; /* Further reduce font size for paragraph */
+        line-height: 1.4; /* Slightly tighter line height */
+    }
+}

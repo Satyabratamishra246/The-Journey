@@ -23,98 +23,102 @@
         </div>
     </nav>
     <main>
-        <!-- Content for the specific project will go here -->
-        <section id="project-content" class="custom-project-section">
-            <h1>Netflix Movies and TV Shows Analysis using SQL</h1>
-            <img src="https://github.com/Satyabratamishra246/SQL-Projects/blob/main/netflix-sql-project/logo.png" alt="Netflix Analysis Logo">
-
-            <h2>Project Overview: Comprehensive Analysis of Netflix Titles</h2>
-            <p>This project focuses on performing a detailed analysis of the Netflix titles dataset. The goal is to derive meaningful insights and create utilities that enhance both business decision-making and user experience. The key steps and analyses performed in this project are as follows:</p>
-            
-            <h3>1. Understanding Null/Missing/Unknown Values:</h3>
-            <ul>
-                <li>Conducted a thorough investigation into columns with null, missing, or unknown values to assess data quality and identify areas requiring data cleaning</li>
-            </ul>
-            <h3>2. Creating a Cleaned View for Better Analysis:</h3>
-            <ul>
-                <li>Developed a cleaned view of the dataset by addressing inconsistencies and standardizing the data, enabling more accurate and efficient analysis</li>
-            </ul>
-            <h3>3. Understanding Movies & TV Shows Distribution:</h3>
-            <ul>
-                <li>Analyzed the distribution of movies and TV shows to understand content trends and preferences, providing insights into the types of content available on the platform</li>
-            </ul>
-            <h3>4. Understanding the Different Genres:</h3>
-            <ul>
-                <li>Explored the various genres available in the dataset to identify popular genres and their distribution, aiding in content strategy and recommendation systems</li>
-            </ul>
-            <h3>5. Insights about the Directors and Casts:</h3>
-            <ul>
-                <li>Investigated the directors and cast members, identifying prolific contributors and their impact on content popularity, which can inform talent acquisition and collaboration decisions</li>
-            </ul>
-            <h3>6. Understanding Length of Movies and TV Shows:</h3>
-            <ul>
-                <li>Analyzed the duration of movies and TV shows, identifying patterns and inconsistencies. This helps in understanding content length preferences and standardizing duration data</li>
-            </ul>
-            <h3>7. Creating Stats for The Top Actor:</h3>
-            <ul>
-                <li>Developed detailed statistics for the top actor, including the number of shows they appear in, types of shows, and geographical distribution. This helps in talent evaluation and understanding actor popularity</li>
-            </ul>
-            <h3>8. Utilities for Customers:</h3>
-            <ul>
-                <li>Created utilities such as the "Top 10 Latest Movies List" to enhance user experience by providing quick access to popular and recent content</li>
-            </ul>
-
-            <h2>Detailed Analysis</h2>
-            <details>
-                <summary><strong>Understanding Null/Missing/Unknown Values:</strong></summary>
-                <p>For director column:</p>
-                <pre><code>SELECT director, COUNT(*) AS null_count 
-FROM netflix_titles
-WHERE director IS NULL OR director = 'Unknown' OR TRIM([director]) = ''
-GROUP BY director;</code></pre>
-                <p>Result:</p>
-                <img src="https://github.com/Satyabratamishra246/SQL-Projects/blob/b0c850a89c9109d42054afae579840c4364caaae/netflix-sql-project/result-images/image1.png" alt="Null values in director">
-                <p>The director column has 2634 null values.</p>
-                <pre><code>SELECT TOP 10 DISTINCT director 
-FROM netflix_titles;</code></pre>
-                <p>Result:</p>
-                <img src="https://github.com/Satyabratamishra246/SQL-Projects/blob/89da772b08db3f40f21728e2135bd5718e7db79d/netflix-sql-project/result-images/image1.1.png" alt="Random 10 directors">
-                <p>The director column has multiple values in the same column separated by commas.</p>
-
-                <p>For cast column:</p>
-                <pre><code>SELECT [cast], COUNT(*) AS null_count 
-FROM netflix_titles
-WHERE [cast] IS NULL OR [cast] = 'Unknown' OR TRIM([cast]) = ''
-GROUP BY [cast];</code></pre>
-                <p>Result:</p>
-                <img src="https://github.com/Satyabratamishra246/SQL-Projects/blob/89da772b08db3f40f21728e2135bd5718e7db79d/netflix-sql-project/result-images/image2.png" alt="null value in cast column">
-                <p>The cast column has 825 null values.</p>
-                <pre><code>SELECT TOP 10 [cast]
-FROM netflix_titles;</code></pre>
-                <p>Result:</p>
-                <img src="https://github.com/Satyabratamishra246/SQL-Projects/blob/89da772b08db3f40f21728e2135bd5718e7db79d/netflix-sql-project/result-images/image2.1.png" alt="Random 10 values from cast column">
-                <p>The cast column has multiple values in the same column separated by commas.</p>
-
-                <p>For title column:</p>
-                <pre><code>SELECT type, title, director
-FROM netflix_titles
-WHERE [title] IS NULL OR [title] = 'Unknown' OR TRIM([title]) = '';</code></pre>
-                <p>Result:</p>
-                <img src="https://github.com/Satyabratamishra246/SQL-Projects/blob/89da772b08db3f40f21728e2135bd5718e7db79d/netflix-sql-project/result-images/image3.png" alt="result">
-                <p>Title has an unknown value? No, it's actually the name of the movie 'Unknown'. Hehehe.</p>
-
-                <p>For Country column:</p>
-                <pre><code>SELECT COUNT(*) as Null_count
-FROM netflix_titles
-WHERE [country] IS NULL OR [country] = 'Unknown' OR TRIM([country]) = '';</code></pre>
-                <p>Result:</p>
-                <img src="https://github.com/Satyabratamishra246/SQL-Projects/blob/89da772b08db3f40f21728e2135bd5718e7db79d/netflix-sql-project/result-images/image4.png" alt="result">
-                <p>The country column has 831 null values.</p>
-                <pre><code>SELECT TOP 10 country
-FROM netflix_titles;</code></pre>
-            </details>
+        <section id="project-overview">
+            <h2>Project Overview</h2>
+            <p>This project focuses on performing a detailed analysis of the Netflix titles dataset. The goal is to derive meaningful insights and create utilities that enhance both business decision-making and user experience.</p>
+            <img src="../images/netflix-project.png" alt="netflix-project Logo" class="project-logo"> <!-- Image/logo for the project -->
+            <div class="subsection">
+                <h3>Technologies Used</h3>
+                <ul class="tech-icons">
+                    <li>
+                        <img src="../images/sql-server-logo.png" alt="SQL Icon" class="tech-icon"> <!-- SQL Icon -->
+                        SQL
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="subsection">
+                <h3>Download Dataset</h3>
+                <p>
+                    <a href="https://github.com/Satyabratamishra246/SQL-Projects/blob/main/netflix-sql-project/netflix_titles.csv" class="download-link" download>Click here to download the dataset</a>
+                </p>
+            </div>
         </section>
         
+        <section id="key-steps">
+            <h2>Key Steps and Analyses</h2>
+            <ol>
+                <li><strong>Understanding Null/Missing/Unknown Values:</strong> Conducted a thorough investigation into columns with null, missing, or unknown values to assess data quality and identify areas requiring data cleaning. <em>Assessing data integrity for better analysis.</em></li>
+                <li><strong>Creating a Cleaned View for Better Analysis:</strong> Developed a cleaned view of the dataset by addressing inconsistencies and standardizing the data, enabling more accurate and efficient analysis. <em>Standardizing data for enhanced usability.</em></li>
+                <li><strong>Understanding Movies & TV Shows Distribution:</strong> Analyzed the distribution of movies and TV shows to understand content trends and preferences, providing insights into the types of content available on the platform. <em>Identifying content trends for strategic planning.</em></li>
+                <li><strong>Understanding the Different Genres:</strong> Explored the various genres available in the dataset to identify popular genres and their distribution, aiding in content strategy and recommendation systems. <em>Recognizing genre preferences to optimize recommendations.</em></li>
+                <li><strong>Insights about the Directors and Casts:</strong> Investigated the directors and cast members, identifying prolific contributors and their impact on content popularity, which can inform talent acquisition and collaboration decisions. <em>Highlighting key contributors for strategic collaborations.</em></li>
+                <li><strong>Understanding Length of Movies and TV Shows:</strong> Analyzed the duration of movies and TV shows, identifying patterns and inconsistencies. This helps in understanding content length preferences and standardizing duration data. <em>Determining ideal content lengths for viewer engagement.</em></li>
+                <li><strong>Creating Stats for The Top Actor:</strong> Developed detailed statistics for the top actor, including the number of shows they appear in, types of shows, and geographical distribution. This helps in talent evaluation and understanding actor popularity. <em>Evaluating actor impact on content success.</em></li>
+                <li><strong>Utilities for Customers:</strong> Created utilities such as the "Top 10 Latest Movies List" to enhance user experience by providing quick access to popular and recent content. <em>Improving user experience with easy access to trending content.</em></li>
+            </ol>
+            <div class="subsection">
+                <h3>Detailed Analysis and Code</h3>
+                <p>For a comprehensive overview of the analysis and to view the complete code, visit my GitHub repository:</p>
+                <a href="https://github.com/Satyabratamishra246/SQL-Projects/tree/main/netflix-sql-project" target="_blank">GitHub Repository</a> <!-- Update with your actual repository link -->
+            </div>
+        </section>
+
+        <section id="descriptive-insights">
+            <h2>Some Descriptive Insights</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Insight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Movie & TV Shows distribution</td>
+                        <td>The data shows that the number of movies and TV shows on the platform has increased significantly since 2015. While the number of movies has increased by around 90%, the number of TV shows has seen a more dramatic increase of approximately 460%. This suggests that the platform has been actively expanding its TV show content.</td>
+                    </tr>
+                    <tr>
+                        <td>Market Presence</td>
+                        <td>The data shows that the United States dominates the streaming market with the highest number of movies and TV shows, while countries like India, South Korea, and Japan have a significant presence in both categories. Emerging markets like Nigeria, Mexico, and Australia are also gradually increasing their influence.</td>
+                    </tr>
+                    <tr>
+                        <td>Rating for Movie & TV Show</td>
+                        <td>The data shows that the majority of movies and TV shows on the platform are rated "Restricted/Adult" and "Parents Strongly Cautioned," indicating a significant portion of the content is intended for mature audiences. While there are a smaller number of movies and TV shows rated "General Audience" and "Parental Guidance Suggested," the content on the platform leans towards a more mature demographic.</td>
+                    </tr>
+                    <tr>
+                        <td>Genre</td>
+                        <td>Netflix offers a diverse range of content, with a strong focus on international movies and TV shows. Popular genres include dramas, comedies, and documentaries, catering to various viewer preferences. This strategy helps attract and retain a broad audience base.</td>
+                    </tr>
+                    <tr>
+                        <td>Top Actor Stats</td>
+                        <td>The analysis reveals that Anupam Kher has been a prominent figure in the entertainment industry for 29 years. He has worked in 42 movies and 1 TV show across various countries, including India, Canada, and the United States. His versatile career has spanned 14 diverse genres, including Crime, Comedy, Musical, Sci-fi Fantasy, and others, and he has collaborated with 273 actors.</td>
+                    </tr>
+                    <tr>
+                        <td>Top Comedians</td>
+                        <td>The top 3 comedians who have appeared in the most stand-up comedy shows on Netflix after 2018 are Jeff Dunham, Kevin Hart, and Katt Williams.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="outcomes">
+            <h2> Outcomes</h2>
+            <p>This project provides an in-depth analysis of the Netflix titles dataset, enhancing data quality and usability through thorough cleaning and standardization. It uncovers content trends, genre popularity, informing strategic content planning. Insights into directors, casts, and content duration help optimize talent acquisition and content curation. 
+                Additionally, actor statistics offer valuable information for talent evaluation. These findings can inform business strategies and enhance the overall user experience on the platform.</p>
+        </section>
+
+
+        <section id="project-list"></section>
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="netflix-data-analysis.html">Netflix Data Analysis using SQL</a></li>
+                <!-- Add more projects here -->
+            </ul>
+        </section>
+        
+
+        <!-- Content for the specific project will go here -->        
         <section id="social-media" class="custom-social-section"> <!-- Added custom class -->
             <h2>Connect with Me</h2>
             <div class="social-media-container">
