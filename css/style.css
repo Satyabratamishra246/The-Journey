@@ -96,11 +96,6 @@ nav ul li a:hover {
     nav ul li {
         flex: 1 1 100%;       /* On mobile, each item takes full width */
     }
-    nav ul li a {
-        border: 1px solid #ccc; /* Visible border on mobile devices */
-        background-color: #f0f0f0; /* Background color for the boxes on mobile */
-        margin-bottom: 3px; /* Space between the boxes */
-    }
 }
 
 /* Main section to take available space */
