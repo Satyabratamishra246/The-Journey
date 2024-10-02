@@ -26,8 +26,19 @@ header {
 
 .banner img {
     width: 100%;          /* Make the banner image cover the full width */
-    height: 50vh;        /* Set height to 50% of the viewport height */
+    height: auto;         /* Maintain the aspect ratio */
     object-fit: cover;   /* Ensures the image covers the space without distortion */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .banner {
+        height: auto; /* Adjust height for smaller screens */
+    }
+    .banner img {
+        height: auto; /* Maintain aspect ratio for the image */
+        max-height: 150px; /* Optional: Set a max height for the image */
+    }
 }
 
 nav {
@@ -51,6 +62,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 nav ul li {
@@ -65,6 +77,20 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #e0e0e0; /* Light background color on hover */
+}
+
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+    }
+    nav ul li {
+        margin-left: 0; /* Remove left margin */
+    }
 }
 
 /* Main section to take available space */
@@ -143,6 +169,19 @@ footer {
 
 .project a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(50% - 20px); /* Each project takes up 50% of the row width minus margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        flex: 1 1 100%; /* Each project takes up full width on small screens */
+    }
 }
 
 #social-media {
