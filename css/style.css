@@ -12,12 +12,12 @@ header {
 
 .banner {
     width: 100%;
-    position: relative;  /* Non-sticky banner */
+    overflow: hidden;  /* Prevent overflow */
 }
 
 .banner img {
-    width: 100%;        /* Make the banner image cover the full width */
-    height: auto;       /* Maintain aspect ratio */
+    width: 100%;       /* Make the banner image cover the full width */
+    height: auto;      /* Maintain aspect ratio */
 }
 
 nav {
