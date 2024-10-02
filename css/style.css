@@ -1,9 +1,15 @@
+/* Ensure body takes full height and uses flexbox */
+html, body {
+    height: 100%; /* Full height for body */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;  /* Dark background */
-    color: #ffffff;              /* Light text color */
+    background-color: #ffffff;  /* Light background */
+    color: #000000;              /* Dark text color */
 }
 
 header {
@@ -11,17 +17,21 @@ header {
 }
 
 .banner {
-    width: 100%;
-    overflow: hidden;  /* Prevent overflow */
+    display: flex;
+    align-items: center;  /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+    height: 300px;       /* Set a specific height for the banner */
+    overflow: hidden;    /* Hide overflow if the image is larger */
 }
 
 .banner img {
-    width: 100%;       /* Make the banner image cover the full width */
-    height: auto;      /* Maintain aspect ratio */
+    width: 100%;          /* Make the banner image cover the full width */
+    height: 50vh;        /* Set height to 50% of the viewport height */
+    object-fit: cover;   /* Ensures the image covers the space without distortion */
 }
 
 nav {
-    background-color: #1e1e1e;  /* Dark background for the nav */
+    background-color: #f0f0f0;  /* Light background for the nav */
     position: sticky;            /* Make the nav sticky */
     top: 0;                     /* Stick to the top of the viewport */
     z-index: 1000;              /* Ensure it's above other elements */
@@ -48,16 +58,18 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #bb86fc; /* Lighter color for links in the header */
+    color: #333; /* Darker color for links in the header */
     text-decoration: none;
     padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    background-color: #333; /* Background color on hover */
+    background-color: #e0e0e0; /* Light background color on hover */
 }
 
+/* Main section to take available space */
 main {
+    flex: 1; /* Allow main to grow and take available space */
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -68,18 +80,18 @@ section {
 }
 
 section h2 {
-    border-bottom: 2px solid #bb86fc; /* Change to a lighter border color */
+    border-bottom: 2px solid #333; /* Change to a darker border color */
     padding-bottom: 10px;
 }
 
 section#hero {
-    background-color: #1e1e1e;  /* Darker hero section */
+    background-color: #f9f9f9;  /* Light hero section */
     padding: 40px 20px;
     text-align: center;
 }
 
 section#hero .btn {
-    background-color: #bb86fc; /* Light button color */
+    background-color: #6200ea; /* Light button color */
     color: #ffffff;             /* Light text on buttons */
     padding: 10px 20px;
     text-decoration: none;
@@ -88,15 +100,81 @@ section#hero .btn {
 }
 
 section#hero .btn:hover {
-    background-color: #9551e2; /* Slightly darker on hover */
+    background-color: #3700b3; /* Slightly darker on hover */
 }
 
 footer {
-    background-color: #1e1e1e; /* Darker footer background */
-    color: white;
+    background-color: #f0f0f0; /* Light footer background */
+    color: black;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    width: 100%; /* Full width */
+    /* Removed position: relative; and bottom: 0; */
+}
+
+.projects-grid {
+    display: flex;              /* Use Flexbox */
+    flex-wrap: wrap;           /* Allow items to wrap onto multiple lines */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+.project {
+    flex: 1 1 calc(25% - 20px); /* Each project takes up 25% of the row width minus margin */
+    margin: 10px;              /* Add some spacing around each project */
+    background-color: #f0f0f0; /* Optional: background for project cards */
+    padding: 15px;             /* Optional: padding inside project cards */
+    border-radius: 5px;        /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+.project h3 {
+    margin: 0 0 10px;          /* Spacing below the project title */
+}
+
+.project p {
+    margin: 0 0 15px;          /* Spacing below the project description */
+}
+
+.project a {
+    display: inline-block;      /* Make the link a block element */
+    color: #6200ea;            /* Link color */
+    text-decoration: none;      /* No underline */
+}
+
+.project a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+#social-media {
+    padding: 20px;              /* Add padding around the section */
+    text-align: center;         /* Center the text */
+}
+
+.social-media-container {
+    display: flex;              /* Use Flexbox to align items */
+    justify-content: center;    /* Center items horizontally */
+    flex-wrap: wrap;           /* Allow wrapping to next line */
+    gap: 15px;                 /* Space between boxes */
+}
+
+.social-media-link {
+    background-color: #f9f9f9; /* Light background for links */
+    border: 1px solid #ccc;    /* Border around the link */
+    border-radius: 5px;        /* Rounded corners */
+    padding: 10px 15px;        /* Padding inside the link box */
+    text-decoration: none;      /* No underline */
+    color: #6200ea;            /* Text color */
+    display: flex;             /* Use Flexbox for icon and text */
+    align-items: center;       /* Center icon and text vertically */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.social-media-link:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+}
+
+.social-media-link img {
+    width: 24px;               /* Set icon width */
+    height: 24px;              /* Set icon height */
+    margin-right: 10px;        /* Space between icon and text */
 }
