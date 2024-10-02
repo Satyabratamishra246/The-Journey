@@ -2,10 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #121212;  /* Dark background for the whole body */
+    color: #ffffff;              /* Light text color */
 }
 
 header {
-    background-color: #333;
+    background-color: #1e1e1e;  /* Darker header background */
     color: white;
     padding: 10px 0;
     position: sticky;
@@ -24,7 +26,9 @@ header .container {
 }
 
 header h1 img {
-    max-height: 50px; /* Adjust based on your logo size */
+    max-height: 50px;  /* Adjust based on your logo size */
+    width: auto;       /* Maintain aspect ratio */
+    height: auto;      /* Ensure it scales with the height */
 }
 
 header nav ul {
@@ -39,13 +43,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: #bb86fc; /* A lighter color for links in the header */
     text-decoration: none;
     padding: 5px 10px;
 }
 
 header nav ul li a:hover {
-    background-color: #555;
+    background-color: #333; /* Background color on hover */
 }
 
 main {
@@ -59,19 +63,19 @@ section {
 }
 
 section h2 {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #bb86fc; /* Change to a lighter border color */
     padding-bottom: 10px;
 }
 
 section#hero {
-    background-color: #f4f4f4;
+    background-color: #1e1e1e;  /* Darker hero section */
     padding: 40px 20px;
     text-align: center;
 }
 
 section#hero .btn {
-    background-color: #333;
-    color: white;
+    background-color: #bb86fc; /* Light button color */
+    color: #ffffff;             /* Light text on buttons */
     padding: 10px 20px;
     text-decoration: none;
     margin-top: 20px;
@@ -79,11 +83,11 @@ section#hero .btn {
 }
 
 section#hero .btn:hover {
-    background-color: #555;
+    background-color: #9551e2; /* Slightly darker on hover */
 }
 
 footer {
-    background-color: #333;
+    background-color: #1e1e1e; /* Darker footer background */
     color: white;
     text-align: center;
     padding: 20px 0;
