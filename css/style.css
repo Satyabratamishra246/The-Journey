@@ -2,53 +2,58 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;  /* Dark background for the whole body */
+    background-color: #121212;  /* Dark background */
     color: #ffffff;              /* Light text color */
 }
 
 header {
-    background-color: #1e1e1e;  /* Darker header background */
-    color: white;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
     width: 100%;
-    z-index: 1000;
 }
 
-header .container {
+.banner {
+    width: 100%;
+    position: relative;  /* Non-sticky banner */
+}
+
+.banner img {
+    width: 100%;        /* Make the banner image cover the full width */
+    height: auto;       /* Maintain aspect ratio */
+}
+
+nav {
+    background-color: #1e1e1e;  /* Dark background for the nav */
+    position: sticky;            /* Make the nav sticky */
+    top: 0;                     /* Stick to the top of the viewport */
+    z-index: 1000;              /* Ensure it's above other elements */
+}
+
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px 20px;         /* Add padding for the nav */
 }
 
-header h1 img {
-    max-height: 50px;  /* Adjust based on your logo size */
-    width: auto;       /* Maintain aspect ratio */
-    height: auto;      /* Ensure it scales with the height */
-}
-
-header nav ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-header nav ul li {
+nav ul li {
     margin-left: 20px;
 }
 
-header nav ul li a {
-    color: #bb86fc; /* A lighter color for links in the header */
+nav ul li a {
+    color: #bb86fc; /* Lighter color for links in the header */
     text-decoration: none;
     padding: 5px 10px;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     background-color: #333; /* Background color on hover */
 }
 
