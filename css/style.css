@@ -59,16 +59,15 @@ nav .container {
 
 nav ul {
     display: flex;             /* Use Flexbox for layout */
-    flex-wrap: wrap;          /* Allow items to wrap when necessary */
+    flex-wrap: nowrap;        /* Default: items in a single line */
     margin: 0;                /* Remove default margin */
     padding: 0;               /* Remove default padding */
-    list-style: none;
+    list-style: none;         /* Remove default bullet points */
 }
 
 nav ul li {
     margin: 5px;              /* Add spacing around each list item */
     flex: 1 1 150px;          /* Allow items to grow and shrink with a minimum width */
-    /* 1: grow, 1: shrink, 150px: base size */
 }
 
 nav ul li a {
@@ -79,6 +78,7 @@ nav ul li a {
     border-radius: 5px;       /* Rounded corners for the boxes */
     transition: border-color 0.3s; /* Smooth transition for border color */
     display: inline-block;     /* Ensures the anchor tags are treated as block elements */
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -86,9 +86,20 @@ nav ul li a:hover {
     border-color: #ccc;        /* Border color on hover */
 }
 
+/* Media query for mobile view */
 @media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;      /* Enable wrapping on mobile */
+        flex-direction: column;
+    }
+
     nav ul li {
-        flex: 1 1 100%; /* On smaller screens, stack vertically and take full width */
+        flex: 1 1 100%;       /* On mobile, each item takes full width */
+    }
+    nav ul li a {
+        border: 1px solid #ccc; /* Visible border on mobile devices */
+        background-color: #f0f0f0; /* Background color for the boxes on mobile */
+        margin-bottom: 3px; /* Space between the boxes */
     }
 }
 
