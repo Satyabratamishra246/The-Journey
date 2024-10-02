@@ -58,46 +58,36 @@ nav .container {
 }
 
 nav ul {
-    display: flex;
-    flex-direction: row; /* Default to horizontal layout for desktop */
-    flex-wrap: wrap; /* Allow wrapping of items */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    display: flex;             /* Use Flexbox for layout */
+    flex-wrap: wrap;          /* Allow items to wrap when necessary */
+    margin: 0;                /* Remove default margin */
+    padding: 0;               /* Remove default padding */
 }
 
 nav ul li {
-    margin: 5px; /* Add spacing around each list item */
+    margin: 5px;              /* Add spacing around each list item */
+    flex: 1 1 150px;          /* Allow items to grow and shrink with a minimum width */
+    /* 1: grow, 1: shrink, 150px: base size */
 }
 
 nav ul li a {
-    color: #333; /* Darker color for links in the header */
+    color: #333;              /* Darker color for links in the header */
     text-decoration: none;
-    padding: 10px 15px; /* Adjusted padding for the boxes */
+    padding: 10px 15px;       /* Adjusted padding for the boxes */
     border: 1px solid transparent; /* Initial border to create boxes */
-    border-radius: 5px; /* Rounded corners for the boxes */
+    border-radius: 5px;       /* Rounded corners for the boxes */
     transition: border-color 0.3s; /* Smooth transition for border color */
-    display: inline-block; /* Ensures the anchor tags are treated as block elements */
-    min-width: 100px; /* Set a minimum width to maintain uniformity */
+    display: inline-block;     /* Ensures the anchor tags are treated as block elements */
 }
 
 nav ul li a:hover {
     background-color: #e0e0e0; /* Light background color on hover */
-    border-color: #ccc; /* Border color on hover */
+    border-color: #ccc;        /* Border color on hover */
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stack items vertically for mobile */
-    }
-
     nav ul li {
-        width: 100%; /* Make list items full width on mobile */
-    }
-
-    nav ul li a {
-        border: 1px solid #ccc; /* Visible border on mobile devices */
-        background-color: #f0f0f0; /* Background color for the boxes on mobile */
-        margin-bottom: 10px; /* Space between the boxes */
+        flex: 1 1 100%; /* On smaller screens, stack vertically and take full width */
     }
 }
 
