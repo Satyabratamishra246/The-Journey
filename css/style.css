@@ -62,6 +62,7 @@ nav ul {
     flex-wrap: wrap;          /* Allow items to wrap when necessary */
     margin: 0;                /* Remove default margin */
     padding: 0;               /* Remove default padding */
+    list-style: none;
 }
 
 nav ul li {
