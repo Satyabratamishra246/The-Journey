@@ -529,3 +529,115 @@ footer {
         line-height: 1.4; /* Slightly tighter line height */
     }
 }
+
+#projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 340px; /* Height for one row of three cards */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.projects-container.expanded {
+    max-height: none; /* Remove height restriction when expanded */
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+    height: 300px; /* Fixed height for consistency */
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire card */
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card h4 {
+    font-size: 18px; /* Smaller font size */
+    margin: 5px 0;
+}
+
+.card p {
+    font-size: 14px; /* Smaller font size */
+    margin: 5px 0;
+}
+
+.card strong {
+    color: #fff;
+}
+
+.expand-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.expand-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+        margin-bottom: 20px;
+    }
+
+    .category h3 {
+        font-size: 20px;
+    }
+
+    .card h4 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Each card takes full width on small screens */
+    }
+}
